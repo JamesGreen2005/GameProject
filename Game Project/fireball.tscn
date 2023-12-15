@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg73m4mihimao"]
+
+[ext_resource type="Texture2D" uid="uid://efaixlseu481" path="res://fireeballl.jpg" id="1_k75ql"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ucb5l"]
+radius = 56.0803
+
+[node name="fireball" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ucb5l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 2)
+scale = Vector2(0.396985, 0.334646)
+texture = ExtResource("1_k75ql")

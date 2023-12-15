@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d16e85rpo0yee"]
+
+[ext_resource type="Texture2D" uid="uid://cj80rofpdjvy4" path="res://ruddy.png" id="1_5a3a4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hcmi5"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hcmi5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5a3a4")

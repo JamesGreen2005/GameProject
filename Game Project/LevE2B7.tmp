@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://cypt5dxvdrguu"]
+
+[ext_resource type="PackedScene" uid="uid://bhvm2jwitv1c5" path="res://floor2.tscn" id="1_2kl7g"]
+[ext_resource type="Script" path="res://Global.gd" id="1_ga0mx"]
+[ext_resource type="PackedScene" uid="uid://ypndwyyghrp3" path="res://floor.tscn" id="1_yucxm"]
+[ext_resource type="PackedScene" uid="uid://ci7vomevmgmh6" path="res://enemy1.tscn" id="2_8nap3"]
+[ext_resource type="PackedScene" uid="uid://cl5n80ual2f7m" path="res://enemy2.tscn" id="2_x8cdq"]
+[ext_resource type="PackedScene" uid="uid://nytx3ahca3lk" path="res://score_ui.tscn" id="4_oc5rn"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ga0mx")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_yucxm")]
+
+[node name="Camera2D" type="Camera2D" parent="StaticBody2D"]
+offset = Vector2(0, -150)
+zoom = Vector2(0.5, 0.5)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_8nap3")]
+position = Vector2(115, -111)
+
+[node name="ScoreUI" parent="CharacterBody2D" instance=ExtResource("4_oc5rn")]
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("1_2kl7g")]
+position = Vector2(910, -126)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_x8cdq")]
+position = Vector2(-116, -104)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("1_2kl7g")]
+position = Vector2(-910, -126)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("1_2kl7g")]
+position = Vector2(-458, -46)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("1_2kl7g")]
+position = Vector2(458, -46)

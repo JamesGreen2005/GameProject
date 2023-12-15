@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxjnj6hyhgjo8"]
+
+[ext_resource type="Script" path="res://CharacterBody2D2.gd" id="1_3ma6t"]
+[ext_resource type="Texture2D" uid="uid://cj80rofpdjvy4" path="res://ruddy.png" id="2_o100y"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vbyih"]
+radius = 140.0
+height = 650.0
+
+[node name="Player2" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_3ma6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_vbyih")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(53, -76)
+scale = Vector2(20, 22.7188)
+texture = ExtResource("2_o100y")
+
+[node name="AttackTimer2" type="Timer" parent="CharacterBody2D"]
+wait_time = 0.504
+
+[connection signal="timeout" from="CharacterBody2D/AttackTimer2" to="CharacterBody2D" method="_on_attack_timer_2_timeout"]

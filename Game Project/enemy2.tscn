@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl5n80ual2f7m"]
+
+[ext_resource type="Texture2D" uid="uid://cj80rofpdjvy4" path="res://ruddy.png" id="1_i1wr7"]
+[ext_resource type="Script" path="res://enemy2.gd" id="1_yto0r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldbyn"]
+size = Vector2(23, 48)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+disable_mode = 2
+script = ExtResource("1_yto0r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_ldbyn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, -4)
+scale = Vector2(1.6875, 1.875)
+texture = ExtResource("1_i1wr7")
