@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://4xjdf1bg1a27"]
+
+[ext_resource type="Texture2D" uid="uid://bh148u0ok2nbr" path="res://images/76ca547f-75cd-4dcd-9bc8-c5db1a073c8d (1).webp" id="1_mo410"]
+
+[node name="graphics" type="Node2D"]
+
+[node name="Up-board-notebook-character-cartoon-style-vector-16911987" type="Sprite2D" parent="."]
+position = Vector2(1.99997, -1.99998)
+scale = Vector2(0.45933, 0.181481)
+texture = ExtResource("1_mo410")

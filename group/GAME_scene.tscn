@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dci3cpb542myl"]
+
+[ext_resource type="Script" path="res://GAME_scene.gd" id="1_iekx3"]
+[ext_resource type="Texture2D" uid="uid://dus0pjn7rqqgx" path="res://images/2228aee48d5fdfca2fa757a95399a488.jpg" id="1_tkggd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_iekx3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="2228Aee48d5Fdfca2Fa757a95399a488" type="Sprite2D" parent="."]
+position = Vector2(384, 202)
+texture = ExtResource("1_tkggd")
+
+[connection signal="tree_entered" from="Sprite2D" to="." method="_on_sprite_2d_tree_entered"]
